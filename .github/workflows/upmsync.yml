@@ -20,7 +20,7 @@ jobs:
       - name: Download Package
         run: |
           mkdir Staging && cd Staging
-          curl {{ env.base }}-${{ env.version }}.tgz --output content.tgz
+          curl ${{ env.base }}-${{ env.version }}.tgz --output content.tgz
           tar -xvzf content.tgz
           rm content.tgz
           ls
